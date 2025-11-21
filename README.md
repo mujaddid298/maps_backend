@@ -110,7 +110,8 @@ Access the app:
 You can integrate the Maps Backend into open-webui for internal use,
 such as:
 
--   Providing Maps endpoints as an HTTP plugin\
--   Adding internal API keys for Maps access\
--   Integration via reverse proxy (Nginx)\
+-   Providing Maps endpoints as an HTTP plugin
+-   Adding internal API keys for Maps access
+-   Integration via reverse proxy (Nginx)
 -   Connecting JWT tokens to the open-webui login system
+
