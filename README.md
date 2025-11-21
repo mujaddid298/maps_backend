@@ -33,7 +33,7 @@ npm start
 
 Server akan berjalan default pada:
 ```
-http://localhost:3001
+http://localhost:3000
 ```
 ## Environment Variables
 Edit file `.env.example` menjadi `.env`, kemudian sesuaikan isinya:
@@ -54,36 +54,27 @@ File dokumentasi API:
 ````
 openapi.json
 ````
-markdown
-Salin kode
-
 Cara membukanya:
 
 1. Kunjungi https://editor.swagger.io
 2. Import file `openapi.json`
 
 Atau akses langsung melalui endpoint:
-
+````
 GET /openapi.json
-
-shell
-Salin kode
-
+````
 ## Endpoint Utama
 
 ### Auth
+````
 GET /auth/generate
-
-shell
-Salin kode
+````
 Menghasilkan JWT untuk testing (Postman/Thunder Client).
 
 ### Maps
 Semua endpoint Maps memerlukan header:
 Authorization: Bearer <token>
 
-markdown
-Salin kode
 
 1. **POST /api/search**  
    Pencarian tempat berdasarkan query + optional lokasi.
@@ -97,22 +88,16 @@ Salin kode
 ## Cara Menjalankan dengan Docker (Opsional)
 
 ### Build image
+````
 docker build -t maps-backend .
-
-shell
-Salin kode
-
+````
 ### Jalankan container
+````
 docker-compose up -d
-
-yaml
-Salin kode
-
+````
 Akses aplikasi:
-http://localhost:3000
+http://localhost:3001
 
-kotlin
-Salin kode
 
 ## Integration to open-webui (Opsional)
 Anda dapat mengintegrasikan Maps Backend ke open-webui untuk kebutuhan internal seperti:
@@ -122,10 +107,6 @@ Anda dapat mengintegrasikan Maps Backend ke open-webui untuk kebutuhan internal 
 - Integrasi melalui reverse proxy (Nginx)
 - Menyambungkan token JWT ke sistem login open-webui
 
-Integrasi umum dilakukan dengan menambahkan konfigurasi:
-
-OPENWEBUI_API_BASE=https://openwebui.internal/api
-OPENWEBUI_TOKEN=xxxxxxx
 
 
 
