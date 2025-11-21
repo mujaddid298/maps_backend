@@ -1,0 +1,105 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Google Maps Tool Server",
+    "version": "1.0.0",
+    "description": "API wrapper for Google Maps Search, Directions, and Embed"
+  },
+  "paths": {
+    "/api/search": {
+      "post": {
+        "summary": "Search places via Google Maps",
+        "operationId": "search_places",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "query": { "type": "string" },
+                  "lat": { "type": "number" },
+                  "lng": { "type": "number" },
+                  "radius": { "type": "integer" }
+                },
+                "required": ["query"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Search results",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/directions": {
+      "post": {
+        "summary": "Get route directions",
+        "operationId": "directions",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "origin": { "type": "string" },
+                  "destination": { "type": "string" },
+                  "mode": { "type": "string" }
+                },
+                "required": ["origin", "destination"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Directions data",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/embed": {
+      "get": {
+        "summary": "Generate Google Maps embed URL",
+        "operationId": "embedUrl",
+        "parameters": [
+          {
+            "name": "origin",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "destination",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Iframe URL",
+            "content": {
+              "application/json": {
+                "schema": { "type": "object" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
