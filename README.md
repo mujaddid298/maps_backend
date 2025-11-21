@@ -9,17 +9,17 @@ validation, rate limiting, caching, and OpenAPI-based API documentation.
 
 ## Key Features
 
--   JWT Authentication (JSON Web Token)\
+-   JWT Authentication (JSON Web Token)
 -   Maps Endpoints:
     -   Place Search (Google Maps Text Search API)
     -   Directions API (travel routes)
     -   Embed URL (Google Maps Embed API)
--   Request Validation using Joi\
--   Rate Limiting (global & endpoint-level)\
--   Response Caching to optimize Google API quota\
--   HTTP Logging using Morgan\
--   Security with Helmet\
--   CORS enabled\
+-   Request Validation using Joi
+-   Rate Limiting (global & endpoint-level)
+-   Response Caching to optimize Google API quota
+-   HTTP Logging using Morgan
+-   Security with Helmet
+-   CORS enabled
 -   OpenAPI (Swagger) for API documentation
 
 ## Installation
@@ -50,7 +50,7 @@ Rename `.env.example` to `.env` and adjust the values:
     RATE_LIMIT_MAX=100
 
 **Notes:**\
-- `GMAPS_SERVER_KEY` is used for Directions & Place Search\
+- `GMAPS_SERVER_KEY` is used for Directions & Place Search
 - `GMAPS_EMBED_KEY` should be restricted (embed only)
 
 ## API Documentation
@@ -61,7 +61,7 @@ API documentation file:
 
 How to open it:
 
-1.  Visit https://editor.swagger.io\
+1.  Visit https://editor.swagger.io
 2.  Import the `openapi.json` file
 
 Or access it directly via endpoint:
@@ -82,13 +82,13 @@ All Maps endpoints require a header:
 
     Authorization: Bearer <token>
 
-1.  **POST /api/search**\
+1.  **POST /api/search**
     Search places based on a query + optional location.
 
-2.  **POST /api/directions**\
+2.  **POST /api/directions**
     Retrieve travel route information.
 
-3.  **GET /api/embed**\
+3.  **GET /api/embed**
     Generate a Google Maps embed URL.
 
 ## Running with Docker (Optional)
@@ -114,4 +114,5 @@ such as:
 -   Adding internal API keys for Maps access
 -   Integration via reverse proxy (Nginx)
 -   Connecting JWT tokens to the open-webui login system
+
 
