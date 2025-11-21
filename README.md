@@ -21,50 +21,29 @@ Maps Backend Service adalah REST API berbasis Node.js dan Express yang menyediak
 Clone repository dan masuk ke folder project:
 
 ```
-
 git clone https://github.com/USERNAME/maps-backend.git
 cd maps-backend
 npm install
-
-shell
-Salin kode
 ```
 
 ## Cara Menjalankan
-
-### Mode Development
-npm run dev
-
-shell
-Salin kode
-
-### Mode Production
+```
 npm start
-
-arduino
-Salin kode
+```
 
 Server akan berjalan default pada:
-http://localhost:3000
-
-markdown
-Salin kode
-
+```
+http://localhost:3001
+```
 ## Environment Variables
-Buat file `.env` berdasarkan `.env.example`, kemudian isi dengan:
+Edit file `.env.example` menjadi `.env`, kemudian sesuaikan isinya:
 
 PORT=3000
-
 JWT_SECRET=your_jwt_secret
-
 GMAPS_SERVER_KEY=your_google_maps_server_key
 GMAPS_EMBED_KEY=your_google_maps_embed_key
-
 RATE_LIMIT_WINDOW_MS=60000
 RATE_LIMIT_MAX=100
-
-markdown
-Salin kode
 
 **Catatan:**  
 - `GMAPS_SERVER_KEY` digunakan untuk Directions & Place Search  
@@ -72,9 +51,9 @@ Salin kode
 
 ## API Documentation
 File dokumentasi API:
-
+````
 openapi.json
-
+````
 markdown
 Salin kode
 
@@ -147,5 +126,6 @@ Integrasi umum dilakukan dengan menambahkan konfigurasi:
 
 OPENWEBUI_API_BASE=https://openwebui.internal/api
 OPENWEBUI_TOKEN=xxxxxxx
+
 
 
