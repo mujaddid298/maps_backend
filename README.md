@@ -37,14 +37,14 @@ http://localhost:3000
 ```
 ## Environment Variables
 Edit file `.env.example` menjadi `.env`, kemudian sesuaikan isinya:
-
+````
 PORT=3000
 JWT_SECRET=your_jwt_secret
 GMAPS_SERVER_KEY=your_google_maps_server_key
 GMAPS_EMBED_KEY=your_google_maps_embed_key
 RATE_LIMIT_WINDOW_MS=60000
 RATE_LIMIT_MAX=100
-
+````
 **Catatan:**  
 - `GMAPS_SERVER_KEY` digunakan untuk Directions & Place Search  
 - `GMAPS_EMBED_KEY` harus restricted (khusus embed)
@@ -106,6 +106,7 @@ Anda dapat mengintegrasikan Maps Backend ke open-webui untuk kebutuhan internal 
 - Menambahkan API-key internal untuk akses Maps
 - Integrasi melalui reverse proxy (Nginx)
 - Menyambungkan token JWT ke sistem login open-webui
+
 
 
 
