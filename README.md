@@ -20,7 +20,7 @@ Maps Backend Service adalah REST API berbasis Node.js dan Express yang menyediak
 ## Cara Instalasi
 Clone repository dan masuk ke folder project:
 
-``
+```
 
 git clone https://github.com/USERNAME/maps-backend.git
 cd maps-backend
@@ -28,7 +28,7 @@ npm install
 
 shell
 Salin kode
-``
+```
 
 ## Cara Menjalankan
 
@@ -147,4 +147,5 @@ Integrasi umum dilakukan dengan menambahkan konfigurasi:
 
 OPENWEBUI_API_BASE=https://openwebui.internal/api
 OPENWEBUI_TOKEN=xxxxxxx
+
 
